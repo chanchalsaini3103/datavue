@@ -43,19 +43,18 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-  className="hero-buttons"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 1.2, duration: 0.8 }}
->
-  <a href="#services" className="btn btn-primary">
-    Get Expert Help
-  </a>
-  <a href="#contacts" className="btn btn-outline">
-    Book a Call
-  </a>
-</motion.div>
-
+          className="hero-buttons"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+        >
+          <a href="#services" className="btn btn-primary">
+            <span>Get Expert Help</span>
+          </a>
+          <a href="#contacts" className="btn btn-outline">
+            <span>Book a Call</span>
+          </a>
+        </motion.div>
       </div>
 
       <div className="hero-media">
