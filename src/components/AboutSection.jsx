@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "../styles/aboutsection.css";
 
 const stats = [
@@ -25,8 +26,14 @@ const stats = [
 ];
 
 const AboutSection = () => {
+  // useInView hook
+  const [ref, inView] = useInView({
+    triggerOnce: true, // animate only once
+    threshold: 0.3, // 30% of section must be visible
+  });
+
   return (
-    <section className="about-section" id="about">
+    <section className="about-section" id="about" ref={ref}>
       <div className="about-header">
         <p className="small-heading">OUR EXPERTISE</p>
         <h2 className="main-heading">Why Choose Us?</h2>
@@ -37,13 +44,19 @@ const AboutSection = () => {
 
       <div className="about-counters">
         {stats.map((stat, index) => (
-          <div className="counter-box" key={index}>
+          <motion.div
+            className="counter-box"
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+          >
             <p className="counter-label">{stat.label}</p>
             <span className="counter-number">
-              <CountUp start={0} end={stat.number} duration={2} />+
+              {inView && <CountUp start={0} end={stat.number} duration={2} />}+
             </span>
             <p className="counter-description">{stat.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
