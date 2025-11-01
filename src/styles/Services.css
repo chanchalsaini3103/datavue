@@ -1,0 +1,101 @@
+.services-section {
+  padding: 4rem 2rem;
+  background-color: #111; /* dark background */
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.services-header .services-subtitle {
+  color: #f58014;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.services-header .services-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 300px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.service-tag {
+  background-color: #333;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.service-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.service-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.service-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tertiary-btn {
+  border: 1px solid #f5f5f5;
+  background-color: transparent;
+  color: #f5f5f5;
+}
+
+.tertiary-btn:hover {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+.primary-btn {
+  background-color: #f58014;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #e46a00;
+}
