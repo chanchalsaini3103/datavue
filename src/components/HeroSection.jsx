@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles/herosection.css";
+import "../styles/HeroSection.css";
 
 const HeroSection = () => {
   const text = "datavue.";
