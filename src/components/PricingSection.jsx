@@ -1,36 +1,39 @@
 import React from "react";
 import "../styles/PricingSection.css";
 
-const plans = [
+const pricingPlans = [
   {
-    title: "Basic",
-    price: "$49/mo",
+    name: "Basic",
+    description: "Ideal for small businesses",
+    price: 18,
     features: [
-      "5 Projects",
-      "10 GB Storage",
-      "Basic Support",
-      "Collaboration Tools"
+      "Basic IT consulting sessions",
+      "Cloud storage setup",
+      "Standard cybersecurity package",
+      "Support during business hours",
     ],
   },
   {
-    title: "Pro",
-    price: "$99/mo",
+    name: "Pro",
+    description: "Comprehensive IT management",
+    price: 99,
     features: [
-      "20 Projects",
-      "50 GB Storage",
-      "Priority Support",
-      "Team Collaboration"
+      "Full IT consulting sessions",
+      "Custom cloud solutions and integration",
+      "24/7 cybersecurity package",
+      "On-site support",
     ],
-    popular: true
+    highlighted: true,
   },
   {
-    title: "Enterprise",
-    price: "$199/mo",
+    name: "Enterprise",
+    description: "Fully managed IT solutions",
+    price: 200,
     features: [
-      "Unlimited Projects",
-      "200 GB Storage",
-      "24/7 Support",
-      "Advanced Analytics"
+      "Unlimited IT consulting sessions",
+      "Advanced cloud solutions",
+      "Dedicated cybersecurity team",
+      "Full-time on-site support",
     ],
   },
 ];
@@ -39,25 +42,38 @@ const PricingSection = () => {
   return (
     <section className="pricing-section" id="pricing">
       <div className="pricing-header">
-        <h2>Our Pricing Plans</h2>
-        <p>Choose a plan that fits your business needs.</p>
+        <p className="subtitle">PRICING PLANS</p>
+        <h2 className="title">Flexible Pricing to Suit Your Budget</h2>
+        <p className="description">
+          We offer flexible pricing plans tailored to the specific needs of your
+          business. Whether you are a small startup or a large enterprise, we
+          have a solution that fits your budget.
+        </p>
       </div>
-
       <div className="pricing-cards">
-        {plans.map((plan, index) => (
+        {pricingPlans.map((plan) => (
           <div
-            key={index}
-            className={`pricing-card ${plan.popular ? "popular" : ""}`}
+            key={plan.name}
+            className={`pricing-card ${plan.highlighted ? "highlighted" : ""}`}
           >
-            {plan.popular && <span className="popular-badge">Most Popular</span>}
-            <h3>{plan.title}</h3>
-            <p className="price">{plan.price}</p>
-            <ul>
-              {plan.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
+            <h3 className="plan-name">{plan.name}</h3>
+            <p className="plan-description">{plan.description}</p>
+            <p className="starting-text">STARTING AT</p>
+            <div className="price">
+              <span className="currency">$</span>
+              <span className="amount">{plan.price}</span>
+              <span className="per-month">/month</span>
+            </div>
+            <ul className="features">
+              {plan.features.map((feature, index) => (
+                <li key={index}>
+                  <span className="checkmark">✔</span> {feature}
+                </li>
               ))}
             </ul>
-            <button className="btn">Get Started</button>
+            <a href="#contacts" className="cta-button">
+              Try it now
+            </a>
           </div>
         ))}
       </div>

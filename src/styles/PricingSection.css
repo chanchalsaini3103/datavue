@@ -1,108 +1,166 @@
-/* Pricing Section */
 .pricing-section {
   padding: 80px 20px;
-  background: #f9f9f9;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
 }
 
-.pricing-header h2 {
-  font-size: 2.5rem;
+.pricing-header .subtitle {
+  color: #0f5648;
+
   margin-bottom: 10px;
-  color: #111;
+  font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28px;
 }
 
-.pricing-header p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 50px;
+.pricing-header .title {
+  font-size: 36px;
+  color: black;
+
+  margin-bottom: 40px;
+  font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 28px;
+}
+
+.pricing-header .description {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  color: #555;
+  font-size: 36px;
+  color: black;
+
+  margin-bottom: 70px;
+  font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28px;
 }
 
 .pricing-cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
 
 .pricing-card {
-  background: #fff;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
   padding: 40px 30px;
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  width: 280px;
-  position: relative;
+  width: 380px;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .pricing-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.popular {
-  border: 2px solid #ff6347; /* Highlight popular plan */
-}
-
-.popular-badge {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ff6347;
+.pricing-card.highlighted {
+  background-color: #0f5648;
   color: #fff;
-  padding: 5px 15px;
-  border-radius: 30px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  border-color: #0f5648;
 }
 
-.pricing-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #111;
+.plan-name {
+  font-size: 28px;
+  margin-bottom: 0px;
+  font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
+margin-top: 0px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 56px;
+}
+
+.plan-description {
+  margin-bottom: 20px;
+  font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
+margin-top: 0px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 56px;
+}
+
+.starting-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: inherit;
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 48px;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: #ff6347;
+  margin-bottom: 25px;
 }
 
-.pricing-card ul {
+.price .currency {
+  font-size: 36px;
+  vertical-align: top;
+}
+
+.price .per-month {
+  font-size: 18px;
+  margin-left: 5px;
+  color: inherit;
+}
+
+.features {
   list-style: none;
   padding: 0;
-  margin-bottom: 25px;
+  margin: 0 0 30px 0;
+  width: 100%;
   text-align: left;
 }
 
-.pricing-card ul li {
+.features li {
+  display: flex;
+  align-items: center;
   margin-bottom: 12px;
-  font-size: 0.95rem;
-  color: #555;
-  position: relative;
-  padding-left: 20px;
+  font-size: 16px;
 }
 
-.pricing-card ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #ff6347;
+.checkmark {
+  color: #0f5648;
+  margin-right: 10px;
 }
 
-.btn {
-  padding: 12px 25px;
-  background: #ff6347;
-  border: none;
-  border-radius: 50px;
+.pricing-card.highlighted .checkmark {
   color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
 }
 
-.btn:hover {
-  background: #e5533d;
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: 1px solid #0f5648;
+  color: #0f5648;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.pricing-card.highlighted .cta-button {
+  background-color: #fff;
+  color: #0f5648;
+}
+
+.cta-button:hover {
+  background-color: #0f5648;
+  color: #fff;
 }
