@@ -5,8 +5,11 @@ import ServicesSection from './components/ServicesSection';
 import PricingSection from './components/PricingSection';
 import PortfolioSection from './components/PortfolioSection';
 import TeamSection from './components/TeamSection';
-import FAQSection from './components/FAQSection';
+import FAQSection from './components/FAQ';
 import ContactSection from './components/ContactSection';
+import ClientReviews from './components/ClientReviews';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 
 function App() {
   return (
@@ -18,8 +21,12 @@ function App() {
       <PricingSection />
       <PortfolioSection />
       <TeamSection />
-      <FAQSection />
-      <ContactSection />
+     
+     
+      
+      <Testimonials />
+       <FAQ />
+        <ContactSection />
       {/* maybe a footer too */}
     </>
   );

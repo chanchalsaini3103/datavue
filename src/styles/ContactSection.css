@@ -1,0 +1,58 @@
+/* Import Nunito Sans */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+.contact-section {
+  font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
+}
+
+/* Let's Talk Section */
+.lets-talk {
+  background-color: #fdf5f0;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.lets-talk-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.lets-talk-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  padding: 1rem 2rem;
+  background-color: #0f5648;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #0d453a;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  padding: 2rem 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
