@@ -25,7 +25,7 @@ function App() {
       <WorkflowTimeline />
       <PricingSection />
       
-      <TeamSection />
+   
      
      
       

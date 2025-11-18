@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import "../styles/Testimonials.css";
 
 const testimonials = [
@@ -28,44 +29,101 @@ const testimonials = [
   },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 50 
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
 const Testimonials = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
   return (
-    <section className="testimonials-section">
-      <p className="sub-heading">CLIENTS</p>
-      <h2 className="main-heading">What Our Clients Say</h2>
-      <p className="description">
-        Hear from some of our satisfied clients who have transformed their
-        businesses with our help.
-      </p>
+    <section className="testimonials-section" ref={ref}>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={controls}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: { duration: 0.6 }
+          }
+        }}
+      >
+        <p className="sub-heading">CLIENTS</p>
+        <h2 className="main-heading">What Our Clients Say</h2>
+        <p className="description">
+          Hear from some of our satisfied clients who have transformed their
+          businesses with our help.
+        </p>
+      </motion.div>
 
-      <div className="testimonial-grid">
-  {testimonials.map((item, index) => (
-    <div className="testimonial-card" key={index}>
-      {/* Testimonial text */}
-      <p className="testimonial-text">“{item.text}”</p>
+      <motion.div 
+        className="testimonial-grid"
+        variants={containerVariants}
+        initial="hidden"
+        animate={controls}
+      >
+        {testimonials.map((item, index) => (
+          <motion.div 
+            className="testimonial-card" 
+            key={index}
+            variants={itemVariants}
+          >
+            {/* Testimonial text */}
+            <p className="testimonial-text">"{item.text}"</p>
 
-      {/* Quote icon above client info */}
-      <div className="testimonial-icon">
-        <img
-          src="https://framerusercontent.com/images/qtfru7RL5Psm9adPa4E34ni2Hk0.svg"
-          alt="quote icon"
-        />
-      </div>
+            {/* Quote icon above client info */}
+            <div className="testimonial-icon">
+              <img
+                src="https://framerusercontent.com/images/qtfru7RL5Psm9adPa4E34ni2Hk0.svg"
+                alt="quote icon"
+              />
+            </div>
 
-      {/* Client info */}
-      <div className="testimonial-footer">
-        <div className="client-info">
-          <img src={item.image} alt={item.name} className="client-img" />
-          <div className="client-details">
-            <h4 className="client-name">{item.name}</h4>
-            <p className="client-role">{item.role}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
-
+            {/* Client info */}
+            <div className="testimonial-footer">
+              <div className="client-info">
+                <img src={item.image} alt={item.name} className="client-img" />
+                <div className="client-details">
+                  <h4 className="client-name">{item.name}</h4>
+                  <p className="client-role">{item.role}</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };
