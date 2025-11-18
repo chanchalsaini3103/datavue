@@ -1,3 +1,4 @@
+/* FAQ CONTAINER */
 .faq-container {
   max-width: 700px;
   margin: 0 auto;
@@ -5,12 +6,12 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+/* Header Text */
 .faq-title {
   text-align: center;
   color: #0f5648;
   font-weight: 400;
   font-size: 1.2rem;
-  font-family: "Nunito Sans", sans-serif;
 }
 
 .faq-subtitle {
@@ -18,15 +19,19 @@
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 80px;
-  font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
 }
 
+/* FAQ ITEM */
 .faq-item {
   border-top: 1px solid rgba(137, 137, 137, 0.2);
   padding: 1rem 0;
-  font-family: "Nunito Sans", sans-serif;
 }
 
+.faq-item:last-child {
+  border-bottom: 1px solid rgba(137, 137, 137, 0.2);
+}
+
+/* QUESTION ROW */
 .faq-question {
   display: flex;
   padding-top: 25px;
@@ -35,26 +40,282 @@
   cursor: pointer;
   font-weight: 400;
   font-size: 28px;
-  font-family: "Nunito Sans", sans-serif;
 }
 
+/* ANSWER */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   font-size: 18px;
   margin-top: 0.5rem;
-  font-family: "Nunito Sans", sans-serif;
+  color: #444;
 }
 
 .faq-answer.open {
-  max-height: 300px; /* enough to fit content */
+  max-height: 300px;
 }
 
+/* ARROW */
 .arrow {
   transition: transform 0.3s ease;
+  display: inline-block;
+  font-size: 20px;
 }
 
 .arrow.open {
   transform: rotate(180deg);
+}
+
+/* ---------------- LET’S TALK FLOATING CARD ---------------- */
+/* Floating Wrapper (unchanged) */
+.letsTalkWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -120px; 
+  position: relative;
+}
+
+/* GLOBAL FONT */
+* {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
+/* CARD */
+.newTalkCard {
+  background-color: #0f5648;
+  border-radius: 24px;
+  padding: 96px 80px;
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: flex-start;
+  color: white;
+  box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT */
+.leftSection {
+  flex: 1;
+  text-align: left;
+}
+
+.leftSection h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.subtext {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+/* EMAIL INPUT */
+.emailRow {
+  display: flex;
+  gap: 10px;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.emailSubmit {
+  padding: 0 24px;
+  background: black;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowInside {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+}
+
+.emailSubmit:hover {
+  opacity: 0.8;
+}
+/* RIGHT SECTION */
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: flex-end;   /* 🔥 full right alignment */
+  text-align: right;       /* 🔥 text also right aligned */
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* 🔥 push everything to the right */
+  gap: 12px;
+  font-size: 18px;
+}
+
+.iconReact {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .newTalkCard {
+    flex-direction: column;
+    padding: 60px 30px;
+  }
+
+  .rightSection {
+    width: 100%;
+  }
+}
+
+.supportFooter {
+  background: #000;
+  padding: 120px 20px 40px;
+  color: white;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: -100px;
+}
+
+/* TOP DESCRIPTION + BUTTON */
+.footerTop {
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.footerDesc {
+  font-size: 20px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.footerButton {
+  background: white;
+  color: black;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  transition: 0.2s;
+}
+
+.footerButton:hover {
+  opacity: 0.85;
+}
+
+/* OVERLAPPING IMAGES */
+.founderImages {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.founderImg {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #000;
+  margin-left: -10px;
+}
+
+/* MAIN FOOTER ROW */
+.footerMain {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LEFT LOGO */
+.logoCircle {
+  width: 60px;
+  height: 60px;
+  background: orange;
+  border-radius: 50%;
+}
+
+/* CENTER LINKS */
+.footerLinks {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footerLinks li {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footerLinks li:hover {
+  opacity: 0.7;
+}
+
+/* RIGHT SOCIAL ICONS */
+.socialIcons {
+  display: flex;
+  gap: 20px;
+}
+
+.sIcon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sIcon:hover {
+  opacity: 0.7;
+}
+
+/* DIVIDER LINE */
+.footerLine {
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 40px 0;
+}
+
+/* BOTTOM TEXT */
+.footerBottom {
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footerMain {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

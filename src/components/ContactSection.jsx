@@ -3,27 +3,38 @@ import "../styles/ContactSection.css";
 
 const ContactSection = () => {
   return (
-    <div className="contact-section">
+    <div className="contact-wrapper">
       {/* Let's Talk Section */}
-      <div className="lets-talk">
-        <div className="lets-talk-content">
-          <h2 className="lets-talk-title">Let’s Talk</h2>
-          <p className="lets-talk-subtitle">
-            Have a project in mind? Let’s create something amazing together.
+      <div className="lets-talk-card">
+        <div className="lets-talk-left">
+          <h2>Let's Talk</h2>
+          <p>
+            We'd love to learn more about you and what we can design and build together.
           </p>
-          <a href="mailto:hello@datavue.com" className="contact-button">
-            Get in Touch
-          </a>
+          <div className="email-form">
+            <input type="email" placeholder="Email Address" />
+            <button>
+              <span>&#8594;</span>
+            </button>
+          </div>
+        </div>
+
+        <div className="lets-talk-right">
+          <div className="contact-info">
+            <p>123 Innovation Drive, Suite 500,<br/>Tech City, TX 75001</p>
+          </div>
+          <div className="contact-info">
+            <p>Mon-Fri: 9:00 AM - 5:00 PM<br/>Sat: 10:00 AM - 2:00 PM<br/>Sun: Closed</p>
+          </div>
+          <div className="contact-info">
+            <p>(555) 123-4567<br/>info@datavue.com</p>
+          </div>
         </div>
       </div>
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-content">
-          <p className="footer-text">
-            &copy; {new Date().getFullYear()} Datavue Technologies. All rights reserved.
-          </p>
-        </div>
+        <p>&copy; {new Date().getFullYear()} Datavue Technologies. All rights reserved.</p>
       </footer>
     </div>
   );

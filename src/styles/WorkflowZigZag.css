@@ -1,0 +1,121 @@
+.workflowSection {
+  background: #0e5b4c;
+  padding: 80px 20px;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.workflowTitle {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.workflowSubtitle {
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 60px;
+}
+
+/* MAIN CONTAINER */
+.timelineContainer {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* VERTICAL CENTER LINE */
+.centerLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: white;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* EACH TIMELINE ITEM */
+.timelineItem {
+  width: 50%;
+  position: relative;
+  margin-bottom: 120px;
+  min-height: 180px;             /* ensures circle sits in center */
+}
+
+/* RIGHT SIDE (01, 03) */
+.timelineItem.rightSide {
+  margin-left: 50%;
+  text-align: left;
+}
+
+/* LEFT SIDE (02, 04) */
+.timelineItem.leftSide {
+  margin-left: 0;
+  text-align: left;
+}
+
+/* NUMBER CIRCLE — PERFECT CENTER ON LINE */
+.numberCircle {
+  position: absolute;
+  top: 50%;                      /* middle of each block */
+  left: 50%;                     /* center on vertical line */
+  transform: translate(-50%, -50%);
+
+  width: 55px;
+  height: 55px;
+  background: #f06517;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Content box */
+.contentBox {
+  padding: 10px 0;
+}
+
+.contentBox h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.duration {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 8px 0 15px;
+}
+
+/* CHECKLIST */
+.checkList {
+  list-style: none;
+  padding: 0;
+}
+
+.checkList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.checkCircle {
+  width: 18px;
+  height: 18px;
+  background: #f06517;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

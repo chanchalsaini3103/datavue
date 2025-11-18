@@ -10,6 +10,11 @@ import ContactSection from './components/ContactSection';
 import ClientReviews from './components/ClientReviews';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
+import SupportSection from './components/SupportSection';
+import WorkflowTimeline from './components/WorkflowZigZag';
+import "aos/dist/aos.css";
+import AOS from "aos";
+AOS.init();
 
 function App() {
   return (
@@ -17,16 +22,15 @@ function App() {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
+      <WorkflowTimeline />
       <PricingSection />
-      <PortfolioSection />
+      
       <TeamSection />
      
      
       
       <Testimonials />
-       <FAQ />
-        <ContactSection />
+      <SupportSection />
       {/* maybe a footer too */}
     </>
   );
