@@ -7,6 +7,8 @@ import SupportSection from './components/SupportSection';
 import WorkflowZigZag from './components/WorkflowZigZag';
 import "aos/dist/aos.css";
 import AOS from "aos";
+import TeamSection from './components/TeamSection';
+import ServicesSection from './components/ServicesSection';
 AOS.init();
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <ServicesSection />
+      <TeamSection />
       <WorkflowZigZag />
       <PricingSection />
       <Testimonials />
