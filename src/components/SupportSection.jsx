@@ -75,22 +75,25 @@ const SupportPage = () => {
       </p>
 
       <div className="emailRow">
-        <input
-          type="email"
-          placeholder="Email Address"
-          className="emailInput"
-        />
-        <button className="emailSubmit">
-          <span className="arrowInside">→</span>
-        </button>
-      </div>
+  <div className="inputWrapper">
+    <input
+      type="email"
+      placeholder="Email Address"
+      className="emailInput"
+    />
+    <button className="insideBtn">
+      →
+    </button>
+  </div>
+</div>
+
     </div>
 
     {/* RIGHT SIDE */}
     <div className="rightSection">
 
       <div className="infoRow">
-        <p>123 Innovation Drive, Suite 500, Tech City, TX 75001</p>
+        <p>123 Innovation Drive, Suite 500,<br></br> Tech City, TX 75001</p>
         <FaMapMarkerAlt className="iconReact" />
       </div>
 
@@ -104,8 +107,8 @@ const SupportPage = () => {
       </div>
 
       <div className="infoRow">
-        <p>917821820239 — indo@gmail.com</p>
-        <FaPhoneAlt className="iconReact" />
+        <p>917821820239 <br></br> indo@gmail.com</p>
+        {/* <FaPhoneAlt className="iconReact" /> */}
         <FaEnvelope className="iconReact" />
       </div>
 
@@ -118,20 +121,22 @@ const SupportPage = () => {
       <footer className="supportFooter">
 
   {/* TOP SECTION TEXT */}
-  <div className="footerTop">
-    <p className="footerDesc">
-      Our team of experts is ready to discuss your needs and tailor a solution that works for you.
-    </p>
+ <div className="footerTop">
+  <p className="footerDesc">
+    Our team of experts is ready to discuss your needs and tailor a solution that works for you.
+  </p>
 
-    <button className="footerButton">Contact Us →</button>
-
-    {/* OVERLAPPING IMAGES */}
-    <div className="founderImages">
-      <img src="/images/f1.jpg" alt="founder1" className="founderImg" />
-      <img src="/images/f2.jpg" alt="founder2" className="founderImg" />
-      <img src="/images/f3.jpg" alt="founder3" className="founderImg" />
+  <button className="footerButton">
+   <span className="buttonText">Contact Us</span>
+    <div className="avatarGroup">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.aFAdc56FSpTiPfA2F6GAsQHaHa?pid=Api&P=0&h=220" alt="founder1" className="avatarImg" />
+      <img src="https://tse4.mm.bing.net/th/id/OIP.aFAdc56FSpTiPfA2F6GAsQHaHa?pid=Api&P=0&h=220" alt="founder2" className="avatarImg" />
+      <img src="https://tse4.mm.bing.net/th/id/OIP.aFAdc56FSpTiPfA2F6GAsQHaHa?pid=Api&P=0&h=220" alt="founder3" className="avatarImg" />
     </div>
-  </div>
+    
+  </button>
+</div>
+
 
   {/* MIDDLE SECTION WITH 3 COLUMNS */}
   <div className="footerMain">
