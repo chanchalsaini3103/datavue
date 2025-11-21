@@ -1,135 +1,168 @@
-/* General container */
-.services-section {
-  background-color: #111; /* dark background */
-  color: #f5f5f5;
-  padding: 60px 20px;
-  text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-/* Main Heading */
-.services-section .main-title {
-  color: #f58014; /* orange accent */
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.services-section .sub-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #f5f5f5;
-}
-
-/* Service Cards Container */
-.services-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Single Service Card */
-.service-card {
-  background-color: #1a1a1a;
-  border-radius: 16px;
-  padding: 30px 20px;
+.service_container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px;
+  background: #0e0e0e;
+  color: #fff;
+  border-radius: 20px;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+.service_image-wrapper {
+  width: 50%;
 }
 
-/* Service Tags (like #ITStrategy) */
-.service-card .tags p {
-  font-size: 0.85rem;
-  color: #f5f5f5;
-  opacity: 0.7;
-  margin: 0 0 10px 0;
+.service_image {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+max-height: 500px;
+
 }
 
-/* Service Card Title */
-.service-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #f5f5f5;
+/* Right side content */
+.service_content {
+  width: 50%;
 }
 
-/* Service Card Description */
-.service-card p.description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #ccc;
+/* Chips */
+.chips {
+  display: flex;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-/* List items with checkmark icon */
-.service-card .features {
+.chips span {
+  background: #1a1a1a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid #222;
+}
+
+/* Title */
+.service_content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.service_desc {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Bullet points */
+.service_points {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.service-card .features li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  color: #f5f5f5;
+.service_points li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 28px;
 }
 
-.service-card .features li svg {
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  fill: #f5f5f5;
+.service_points li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #3bd671;
+  font-size: 18px;
 }
 
 /* Buttons */
-.service-card a.button {
-  display: inline-block;
-  padding: 10px 25px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.service_buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
 }
 
-.service-card a.button.primary {
-  background-color: #f58014;
-  color: #fff;
+.case_btn {
+  padding: 12px 24px;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
-.service-card a.button.primary:hover {
-  background-color: #e76e00;
+.call_btn {
+  padding: 12px 24px;
+  background: #ff7a21;
+  border: none;
+  color: black;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
-.service-card a.button.secondary {
-  background-color: transparent;
-  color: #f5f5f5;
-  border: 1px solid #f5f5f5;
+.call_btn:hover {
+  background: #ff8d42;
 }
 
-.service-card a.button.secondary:hover {
-  background-color: #f58014;
-  color: #fff;
+.case_btn:hover {
+  background: #262626;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .services-cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
+/* Responsive */
+@media (max-width: 900px) {
+  .service_container {
+    flex-direction: column;
+    padding: 40px;
+    gap: 30px;
   }
+
+  .service_content,
+  .service_image-wrapper {
+    width: 100%;
+  }
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* Wrapper for split screen layout */
+.scroll_sync_container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* LEFT fixed image area */
+.scroll_left {
+  width: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.scroll_main_image {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* RIGHT scrollable content */
+.scroll_right {
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+
+/* Each section (your same container) */
+.service_container {
+  min-height: 100vh; /* IMPORTANT */
+  padding-top: 80px;
 }

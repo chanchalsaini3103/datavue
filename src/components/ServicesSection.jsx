@@ -1,74 +1,108 @@
-import React from "react";
-import "../styles/ServicesSection.css"; // Create a CSS file for styling
+import React, { useEffect, useRef, useState } from "react";
+import "../styles/ServicesSection.css";
 
-const servicesData = [
+const serviceData = [
   {
-    hashtags: ["#ITStrategy", "#BusinessGrowth", "#Innovation"],
+    img: "https://i.pinimg.com/1200x/12/f7/91/12f7917343c652485829ba8910bb7b0f.jpg",
     title: "IT Strategy Development",
-    description:
-      "Transform your business with a comprehensive IT strategy designed to align technology with your goals. Our expert team will guide you through optimising your IT infrastructure, enhancing efficiency, and driving innovation.",
-    highlights: [
-      "Tailored strategies that align with your business objectives",
+    desc: "Transform your business with a comprehensive IT strategy designed to align technology with your goals.",
+    points: [
+      "Tailored strategies aligned with business objectives",
       "Improved operational efficiency",
-      "Enhanced ability to adapt to evolving technology trends",
+      "Adaptability to technology trends",
     ],
   },
   {
-    hashtags: ["#Cybersecurity", "#DataProtection"],
-    title: "Cybersecurity Services",
-    description:
-      "Protect your digital assets with robust cybersecurity solutions that defend against threats and vulnerabilities. Our services include risk assessments, threat monitoring, and incident response to ensure your data remains secure.",
-    highlights: [
-      "Proactive threat detection and response to minimize risks",
-      "Comprehensive protection against cyber threats",
-      "Ongoing support to adapt to new security challenges",
-    ],
+    img: "https://i.pinimg.com/736x/df/79/02/df7902c63506de494ca68c2bab4a62a4.jpg",
+    title: "Cloud Infrastructure Setup",
+    desc: "Move your business to scalable and modern cloud infrastructure.",
+    points: ["End-to-end cloud migration", "Cost-optimized architecture", "High availability"],
+  },
+  {
+    img: "https://i.pinimg.com/1200x/12/f7/91/12f7917343c652485829ba8910bb7b0f.jpg",
+    title: "Cybersecurity Solutions",
+    desc: "Protect your business with modern cybersecurity frameworks.",
+    points: ["Threat detection", "24/7 monitoring", "Zero-trust model"],
+  },
+  {
+    img: "https://i.pinimg.com/736x/df/79/02/df7902c63506de494ca68c2bab4a62a4.jpg",
+    title: "Software Product Development",
+    desc: "Build scalable products using latest technologies.",
+    points: ["Full-stack development", "Modern UI/UX", "Agile sprints"],
   },
 ];
 
-const ServicesSection = () => {
+const ServicesScroll = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const sectionsRef = useRef([]);
+
+  // Intersection observer for switching images
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+            setActiveIndex(Number(entry.target.dataset.index));
+          }
+        });
+      },
+      { threshold: [0.3] }
+    );
+
+    sectionsRef.current.forEach((sec) => observer.observe(sec));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="services-section">
-      <div className="services-header">
-        <p className="subtitle">OUR SERVICES</p>
-        <h2 className="title">Solutions for your unique needs</h2>
+    <div className="scroll_sync_container">
+
+      {/* LEFT FIXED IMAGE */}
+      <div className="scroll_left">
+        <img
+          key={activeIndex}
+          src={serviceData[activeIndex].img}
+          className="scroll_main_image"
+          alt="Service"
+        />
       </div>
-      <div className="services-container">
-        {servicesData.map((service, index) => (
-          <div key={index} className="service-card">
-            <div className="service-hashtags">
-              {service.hashtags.map((tag, idx) => (
-                <span key={idx} className="hashtag">{tag}</span>
-              ))}
-            </div>
-            <h3 className="service-title">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
-            <ul className="service-highlights">
-              {service.highlights.map((highlight, idx) => (
-                <li key={idx}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 256 256"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="check-icon"
-                  >
-                    <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                  </svg>
-                  {highlight}
-                </li>
-              ))}
-            </ul>
-            <div className="service-buttons">
-              <a href="#case-studies" className="btn tertiary">Case Study</a>
-              <a href="#contacts" className="btn primary">Book a Call</a>
+
+      {/* RIGHT SCROLLING CONTENT */}
+      <div className="scroll_right">
+        {serviceData.map((service, index) => (
+          <div
+            className="service_container"
+            key={index}
+            data-index={index}
+            ref={(el) => (sectionsRef.current[index] = el)}
+          >
+            {/* SAME DESIGN YOU PROVIDED */}
+            <div className="service_content">
+              <div className="chips">
+                <span>#ITStrategy</span>
+                <span>#BusinessGrowth</span>
+                <span>#Innovation</span>
+              </div>
+
+              <h2>{service.title}</h2>
+              <p className="service_desc">{service.desc}</p>
+
+              <ul className="service_points">
+                {service.points.map((pt, i) => (
+                  <li key={i}>{pt}</li>
+                ))}
+              </ul>
+
+              <div className="service_buttons">
+                <button className="case_btn">Case Study</button>
+                <button className="call_btn">Book a Call</button>
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </section>
+
+    </div>
   );
 };
 
-export default ServicesSection;
+export default ServicesScroll;
