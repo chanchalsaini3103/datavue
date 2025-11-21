@@ -1,94 +1,113 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/ServicesSection.css";
 
-const serviceData = [
+const sections = [
   {
-    img: "https://i.pinimg.com/1200x/12/f7/91/12f7917343c652485829ba8910bb7b0f.jpg",
+    id: 1,
+    image:
+      "https://i.pinimg.com/1200x/12/f7/91/12f7917343c652485829ba8910bb7b0f.jpg",
+    chips: ["#ITStrategy", "#BusinessGrowth", "#Innovation"],
     title: "IT Strategy Development",
     desc: "Transform your business with a comprehensive IT strategy designed to align technology with your goals.",
     points: [
-      "Tailored strategies aligned with business objectives",
+      "Tailored strategies that align with your business objectives",
       "Improved operational efficiency",
-      "Adaptability to technology trends",
+      "Enhanced ability to adapt to evolving technology trends",
     ],
   },
   {
-    img: "https://i.pinimg.com/736x/df/79/02/df7902c63506de494ca68c2bab4a62a4.jpg",
-    title: "Cloud Infrastructure Setup",
-    desc: "Move your business to scalable and modern cloud infrastructure.",
-    points: ["End-to-end cloud migration", "Cost-optimized architecture", "High availability"],
+    id: 2,
+    image:
+      "https://i.pinimg.com/1200x/a5/bf/7f/a5bf7ff7660d7adff1b58359114d30e7.jpg",
+    chips: ["#Cloud", "#Growth", "#Security"],
+    title: "Cloud Integration",
+    desc: "Modernize your infrastructure by integrating secure and scalable cloud solutions.",
+    points: [
+      "Efficient migration process",
+      "Enhanced data security",
+      "Reduced operational costs",
+    ],
   },
   {
-    img: "https://i.pinimg.com/1200x/12/f7/91/12f7917343c652485829ba8910bb7b0f.jpg",
-    title: "Cybersecurity Solutions",
-    desc: "Protect your business with modern cybersecurity frameworks.",
-    points: ["Threat detection", "24/7 monitoring", "Zero-trust model"],
+    id: 3,
+    image:
+      "https://i.pinimg.com/1200x/4d/00/14/4d0014ff819d2cebdc053454b933af2f.jpg",
+    chips: ["#Automation", "#AI", "#Productivity"],
+    title: "Automation Solutions",
+    desc: "Automate business processes to improve performance and eliminate repetitive tasks.",
+    points: [
+      "Boost employee productivity",
+      "Reduce workflow errors",
+      "Faster execution of tasks",
+    ],
   },
   {
-    img: "https://i.pinimg.com/736x/df/79/02/df7902c63506de494ca68c2bab4a62a4.jpg",
-    title: "Software Product Development",
-    desc: "Build scalable products using latest technologies.",
-    points: ["Full-stack development", "Modern UI/UX", "Agile sprints"],
+    id: 4,
+    image:
+      "https://i.pinimg.com/1200x/a5/bf/7f/a5bf7ff7660d7adff1b58359114d30e7.jpg",
+    chips: ["#Security", "#RiskManagement", "#ITAudit"],
+    title: "Cybersecurity Strategy",
+    desc: "Protect your business with an advanced cybersecurity roadmap.",
+    points: [
+      "Threat detection & prevention",
+      "Strong security policies",
+      "Complete risk assessment",
+    ],
   },
 ];
 
 const ServicesScroll = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const sectionsRef = useRef([]);
+  const sectionRefs = useRef([]);
+  const [activeImage, setActiveImage] = useState(sections[0].image);
 
-  // Intersection observer for switching images
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
-            setActiveIndex(Number(entry.target.dataset.index));
+            const id = entry.target.getAttribute("data-id");
+            const found = sections.find((s) => s.id === Number(id));
+            if (found) setActiveImage(found.image);
           }
         });
       },
-      { threshold: [0.3] }
+      { threshold: [0, 0.3, 0.6, 1] }
     );
 
-    sectionsRef.current.forEach((sec) => observer.observe(sec));
+    sectionRefs.current.forEach((ref) => ref && observer.observe(ref));
+
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="scroll_sync_container">
-
-      {/* LEFT FIXED IMAGE */}
-      <div className="scroll_left">
-        <img
-          key={activeIndex}
-          src={serviceData[activeIndex].img}
-          className="scroll_main_image"
-          alt="Service"
-        />
+    <div className="scroll-wrapper">
+      {/* LEFT STICKY IMAGE */}
+      <div className="sticky-image-container">
+        <img key={activeImage} src={activeImage} className="sticky-image fade" />
       </div>
 
       {/* RIGHT SCROLLING CONTENT */}
-      <div className="scroll_right">
-        {serviceData.map((service, index) => (
+      <div className="content-sections">
+        {sections.map((sec, idx) => (
           <div
+            key={sec.id}
             className="service_container"
-            key={index}
-            data-index={index}
-            ref={(el) => (sectionsRef.current[index] = el)}
+            data-id={sec.id}
+            ref={(el) => (sectionRefs.current[idx] = el)}
           >
-            {/* SAME DESIGN YOU PROVIDED */}
             <div className="service_content">
               <div className="chips">
-                <span>#ITStrategy</span>
-                <span>#BusinessGrowth</span>
-                <span>#Innovation</span>
+                {sec.chips.map((chip) => (
+                  <span key={chip}>{chip}</span>
+                ))}
               </div>
 
-              <h2>{service.title}</h2>
-              <p className="service_desc">{service.desc}</p>
+              <h2>{sec.title}</h2>
+              <p className="service_desc">{sec.desc}</p>
 
               <ul className="service_points">
-                {service.points.map((pt, i) => (
-                  <li key={i}>{pt}</li>
+                {sec.points.map((p) => (
+                  <li key={p}>{p}</li>
                 ))}
               </ul>
 
@@ -100,7 +119,6 @@ const ServicesScroll = () => {
           </div>
         ))}
       </div>
-
     </div>
   );
 };

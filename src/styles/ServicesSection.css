@@ -1,32 +1,71 @@
-.service_container {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.scroll-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  padding: 60px;
+  width: 100%;
+  min-height: 100vh;
   background: #0e0e0e;
   color: #fff;
-  border-radius: 20px;
+  gap: 40px;
+  padding: 40px;
 }
 
-.service_image-wrapper {
-  width: 50%;
+/* LEFT - STICKY IMAGE */
+.sticky-image-container {
+  width: 45%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.service_image {
+.sticky-image {
   width: 100%;
-  border-radius: 18px;
+  height: 85vh;
   object-fit: cover;
-max-height: 500px;
-
+  border-radius: 18px;
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
 
-/* Right side content */
+.fade {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RIGHT - SCROLLING CONTENT */
+.content-sections {
+  width: 55%;
+}
+
+.service_container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* RIGHT SIDE CONTENT */
 .service_content {
-  width: 50%;
+  width: 100%;
 }
 
-/* Chips */
 .chips {
   display: flex;
   gap: 10px;
@@ -41,20 +80,17 @@ max-height: 500px;
   border: 1px solid #222;
 }
 
-/* Title */
 .service_content h2 {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
-/* Description */
 .service_desc {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 25px;
 }
 
-/* Bullet points */
 .service_points {
   list-style: none;
   padding: 0;
@@ -74,7 +110,6 @@ max-height: 500px;
   font-size: 18px;
 }
 
-/* Buttons */
 .service_buttons {
   margin-top: 30px;
   display: flex;
@@ -109,60 +144,19 @@ max-height: 500px;
   background: #262626;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .service_container {
+  .scroll-wrapper {
     flex-direction: column;
-    padding: 40px;
-    gap: 30px;
   }
 
-  .service_content,
-  .service_image-wrapper {
+  .sticky-image-container {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+  }
+
+  .content-sections {
     width: 100%;
   }
-}
-body {
-  font-family: "Nunito Sans", sans-serif;
-}
-
-/* Wrapper for split screen layout */
-.scroll_sync_container {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* LEFT fixed image area */
-.scroll_left {
-  width: 50%;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-}
-
-.scroll_main_image {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 18px;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* RIGHT scrollable content */
-.scroll_right {
-  width: 50%;
-  height: 100vh;
-  overflow-y: scroll;
-  padding-right: 20px;
-}
-
-/* Each section (your same container) */
-.service_container {
-  min-height: 100vh; /* IMPORTANT */
-  padding-top: 80px;
 }
