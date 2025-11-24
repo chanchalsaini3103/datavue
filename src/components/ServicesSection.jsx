@@ -8,7 +8,7 @@ const sections = [
       "https://i.pinimg.com/1200x/12/f7/91/12f7917343c652485829ba8910bb7b0f.jpg",
     chips: ["#ITStrategy", "#BusinessGrowth", "#Innovation"],
     title: "IT Strategy Development",
-    desc: "Transform your business with a comprehensive IT strategy designed to align technology with your goals.",
+    desc: "Transform your business with a comprehensive IT strategy designed to align technology with your goals. Our expert team will guide you through optimising your IT infrastructure, enhancing efficiency, and driving innovation",
     points: [
       "Tailored strategies that align with your business objectives",
       "Improved operational efficiency",
@@ -21,7 +21,7 @@ const sections = [
       "https://i.pinimg.com/1200x/a5/bf/7f/a5bf7ff7660d7adff1b58359114d30e7.jpg",
     chips: ["#Cloud", "#Growth", "#Security"],
     title: "Cloud Integration",
-    desc: "Modernize your infrastructure by integrating secure and scalable cloud solutions.",
+    desc: "Protect your digital assets with robust cybersecurity solutions that defend against threats and vulnerabilities. Our services include risk assessments, threat monitoring, and incident response to ensure your data remains secure.",
     points: [
       "Efficient migration process",
       "Enhanced data security",
@@ -34,7 +34,7 @@ const sections = [
       "https://i.pinimg.com/1200x/4d/00/14/4d0014ff819d2cebdc053454b933af2f.jpg",
     chips: ["#Automation", "#AI", "#Productivity"],
     title: "Automation Solutions",
-    desc: "Automate business processes to improve performance and eliminate repetitive tasks.",
+    desc: "Leverage data-driven insights to make informed decisions and drive business growth. Our data analytics and BI solutions provide actionable intelligence to enhance performance and strategy.",
     points: [
       "Boost employee productivity",
       "Reduce workflow errors",
@@ -47,7 +47,7 @@ const sections = [
       "https://i.pinimg.com/1200x/a5/bf/7f/a5bf7ff7660d7adff1b58359114d30e7.jpg",
     chips: ["#Security", "#RiskManagement", "#ITAudit"],
     title: "Cybersecurity Strategy",
-    desc: "Protect your business with an advanced cybersecurity roadmap.",
+    desc: "Bring your unique business requirements to life with custom software solutions tailored to your needs. Our development team creates scalable, efficient, and user-friendly applications designed to streamline your operations.",
     points: [
       "Threat detection & prevention",
       "Strong security policies",
@@ -80,7 +80,15 @@ const ServicesScroll = () => {
   }, []);
 
   return (
+    <>
+    <div className="scroll-wrappertop">
+
+      <p className="serviceh">OUR SERVICES</p>
+    <span className="sub-headingservice">Solutions for your unique needs</span>
+    </div>
+    
     <div className="scroll-wrapper">
+      
       {/* LEFT STICKY IMAGE */}
       <div className="sticky-image-container">
         <img key={activeImage} src={activeImage} className="sticky-image fade" />
@@ -120,6 +128,7 @@ const ServicesScroll = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
