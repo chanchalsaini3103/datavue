@@ -64,7 +64,7 @@ const SupportPage = () => {
       {/* ------------ LET'S TALK FLOATING CARD ------------ */}
     
 
-<div className="letsTalkWrapper">
+<div className="letsTalkWrapper" id="contact">
   <div className="letsTalkCard newTalkCard">
 
     {/* LEFT SIDE */}
