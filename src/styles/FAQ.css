@@ -94,7 +94,7 @@
   display: flex;
   gap: 40px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   align-items: flex-start;
   color: white;
   box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.2);
@@ -154,25 +154,21 @@
 
 .insideBtn {
   position: absolute;
-  right: -10px;
+  right: 10px;
   top: 50%;
-  transform: translateY(-50%);
-  
+  transform: translateY(-50%); 
   width: 85px;
   height: 85px;
-
   border: none;
   border-radius: 100%;
   background: rgb(240, 101, 23);   /* orange circle */
   color: white;
   font-size: 20px;
   font-weight: bold;
-  cursor: pointer;
-
+ cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: 0.2s ease;
 }
 
@@ -189,6 +185,7 @@
   gap: 26px;
   align-items: flex-end;   /* 🔥 full right alignment */
   text-align: right;       /* 🔥 text also right aligned */
+  margin-top: 30px;
 }
 
 
@@ -363,16 +360,171 @@ margin-left: 220px;
   font-size: 18px;
 }
 
+/* ---------------- SMALL SCREENS ONLY ---------------- */
+@media (max-width: 768px) {
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .footerMain {
+  /* Support Page Global */
+  .supportPage {
+    padding: 0 16px;
+    overflow-x: hidden;
+  }
+
+  /* FAQ */
+  .faq-container {
+    padding: 40px 0;
+  }
+
+  .faq-title {
+    font-size: 18px;
+  }
+
+  .faq-subtitle {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
+
+  .faq-item {
+    padding: 18px 0;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+
+  /* ---------------- LET’S TALK CARD ---------------- */
+  .letsTalkWrapper {
+    padding: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .letsTalkCard {
     flex-direction: column;
+    padding: 28px !important;
+    width: 100%;
+    border-radius: 22px;
+    margin: 0 auto;
+  }
+
+  .leftSection h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .leftSection .subtext {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .emailRow {
+    width: 100%;
+  }
+
+  .inputWrapper {
+    width: 100%;
+  }
+
+  .emailInput {
+    width: 100%;
+    height: 46px;
+    font-size: 15px;
+    padding-left: 14px;
+  }
+
+  .insideBtn {
+    height: 46px;
+    width: 48px;
+    font-size: 22px;
+  }
+
+  /* RIGHT SECTION */
+  .rightSection {
+    margin-top: 26px;
+    gap: 18px;
+  }
+
+  .infoRow {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .infoRow p {
+    font-size: 14px;
+  }
+
+  .iconReact {
+    font-size: 20px;
+  }
+
+  /* ---------------- FOOTER ---------------- */
+  .supportFooter {
+    padding: 40px 0;
     text-align: center;
   }
 
+  .footerTop {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 10px;
+  }
+
+  .footerDesc {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+
+  .footerButton {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 18px;
+  }
+
+  .avatarGroup {
+    margin-left: 12px;
+  }
+
+  /* FOOTER MAIN (3 columns -> 1 column) */
+  .footerMain {
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 32px;
+  }
+
+  .footerLogo .logoCircle {
+    margin: 0 auto;
+  }
+
   .footerLinks {
-    flex-wrap: wrap;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerLinks li {
+    margin: 6px 0;
+    font-size: 15px;
+  }
+
+  .socialIcons {
     justify-content: center;
   }
+
+  .footerLine {
+    margin: 26px auto;
+    width: 90%;
+  }
+
+  .footerBottom {
+    font-size: 13px;
+    padding: 0 8px;
+  }
 }
+
+

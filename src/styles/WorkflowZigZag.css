@@ -36,8 +36,8 @@
 .centerLine {
   position: absolute;
   left: 50%;
-  top: 300px;
-  height: calc(100% - 700px);
+  top: 250px;
+  height: calc(100% - 600px);
   width: 0.5px;
   background:#f06517 ;
   transform: translateX(-50%);
@@ -145,4 +145,150 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/* ------------------------------ */
+/* 📱 TABLET (max-width: 1024px) */
+/* ------------------------------ */
+@media (max-width: 1024px) {
+  .workflowSubtitle {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .timelineContainer {
+    width: 95%;
+    padding: 20px 0;
+  }
+
+  .timelineItem {
+    margin-bottom: 90px;
+  }
+
+  .timelineItem.rightSide {
+    margin-left: 55%;
+  }
+
+  .timelineItem.leftSide {
+    margin-right: 45%;
+  }
+
+  .contentBox h3 {
+    font-size: 32px;
+  }
+
+  .info {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .checkList li {
+    font-size: 16px;
+  }
+}
+
+
+/* ------------------------------ */
+/* 📱 MOBILE (max-width: 768px) */
+/* ------------------------------ */
+@media (max-width: 768px) {
+
+  .workflowSection {
+    padding: 60px 20px;
+  }
+
+  .workflowSubtitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  /* Vertical line goes full height */
+  .centerLine {
+    top: 150px;
+    height: calc(100% - 300px);
+  }
+
+  /* COLLAPSE ZIG-ZAG → SINGLE COLUMN */
+  .timelineRow {
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    margin-bottom: 60px;
+  }
+
+  /* Center the number circle remains same */
+  .numberCircle {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .contentBox h3 {
+    font-size: 26px;
+  }
+
+  .info {
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+  }
+
+  .duration {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .checkList li {
+    font-size: 15px;
+    gap: 12px;
+  }
+
+  .checkCircle {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* ---------------------------------- */
+/* 📱 SMALL MOBILE (max-width: 480px) */
+/* ---------------------------------- */
+@media (max-width: 480px) {
+  .workflowSubtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .timelineRow {
+    padding-top: 40px;
+  }
+
+  .numberCircle {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .contentBox h3 {
+    font-size: 22px;
+  }
+
+  .info {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .checkList li {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .centerLine {
+    height: calc(100% - 200px);
+  }
 }
