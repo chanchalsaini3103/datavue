@@ -1,12 +1,9 @@
-
-
 /* FAQ CONTAINER */
 .faq-container {
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
   font-family: "Nunito Sans", sans-serif;
-     
 }
 
 /* Header Text */
@@ -76,7 +73,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: -120px; 
+  margin-top: -120px;
   position: relative;
   height: 500px;
 }
@@ -120,7 +117,8 @@
   font-weight: 400;
 }
 
-/* EMAIL INPUT */.emailRow {
+/* EMAIL INPUT */
+.emailRow {
   width: 100%;
 }
 
@@ -144,7 +142,7 @@
 }
 
 .emailInput::placeholder {
-  color: white;     /* white with opacity */
+  color: white; /* white with opacity */
   font-weight: 500;
   font-family: "Nunito Sans", sans-serif;
   letter-spacing: 0.5px;
@@ -156,16 +154,16 @@
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
   width: 85px;
   height: 85px;
   border: none;
   border-radius: 100%;
-  background: rgb(240, 101, 23);   /* orange circle */
+  background: rgb(240, 101, 23); /* orange circle */
   color: white;
   font-size: 20px;
   font-weight: bold;
- cursor: pointer;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,32 +181,30 @@
   display: flex;
   flex-direction: column;
   gap: 26px;
-  align-items: flex-end;   /* 🔥 full right alignment */
-  text-align: right;       /* 🔥 text also right aligned */
+  align-items: flex-end; /* 🔥 full right alignment */
+  text-align: right; /* 🔥 text also right aligned */
   margin-top: 30px;
 }
-
 
 .infoRow {
   font-family: "Nunito Sans", "Nunito Sans Placeholder", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: flex-end;  /* 🔥 push everything to the right */
+  justify-content: flex-end; /* 🔥 push everything to the right */
   gap: 12px;
   font-size: 18px;
 }
 
 .iconReact {
-  background: #f5f5f51a;      /* your color */
-  padding: 30px;              /* circle size */
-  border-radius: 50%;         /* makes it round */
-  color: white;               /* icon color */
-  font-size: 30px;            /* icon size */
+  background: #f5f5f51a; /* your color */
+  padding: 30px; /* circle size */
+  border-radius: 50%; /* makes it round */
+  color: white; /* icon color */
+  font-size: 30px; /* icon size */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -234,20 +230,18 @@
 /* TOP DESCRIPTION + BUTTON */
 .footerTop {
   margin-top: 200px;
-  max-width: 1200px;   /* was 700px */
+  max-width: 1200px; /* was 700px */
 }
-
 
 .footerDesc {
   font-size: 50px;
   margin-bottom: 25px;
   font-weight: 600;
-  max-width: 1100px;   /* increased */
-  line-height: 1.2;    /* tighter spacing */
-text-align: center;
-margin-left: 220px;
+  max-width: 1100px; /* increased */
+  line-height: 1.2; /* tighter spacing */
+  text-align: center;
+  margin-left: 220px;
 }
-
 
 .footerButton {
   display: flex;
@@ -265,16 +259,15 @@ margin-left: 220px;
   justify-content: center;
 }
 .buttonText {
-  font-size: 18px;       /* font size */
-  font-weight: 400;      /* bold text */
-  color: black;          /* text color */
+  font-size: 18px; /* font size */
+  font-weight: 400; /* bold text */
+  color: black; /* text color */
   line-height: 28px;
   font-family: "Nunito Sans", sans-serif;
 }
 .avatarGroup {
   display: flex;
   align-items: center;
-  
 }
 
 .avatarImg {
@@ -315,7 +308,7 @@ margin-left: 220px;
   gap: 30px;
   font-size: 18px;
   font-weight: 500;
-   font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .footerLinks li {
@@ -346,7 +339,7 @@ margin-left: 220px;
 
 /* DIVIDER LINE */
 .footerLine {
-   opacity: 0.7;
+  opacity: 0.7;
   height: 1px;
   width: 95%;
   background: white;
@@ -359,13 +352,11 @@ margin-left: 220px;
   font-family: "Nunito Sans", sans-serif;
   font-size: 18px;
 }
-
-/* ---------------- SMALL SCREENS ONLY ---------------- */
+/* ---------------- SMALL SCREENS FIX ---------------- */
 @media (max-width: 768px) {
-
   /* Support Page Global */
   .supportPage {
-    padding: 0 16px;
+    padding: 0 0px;
     overflow-x: hidden;
   }
 
@@ -398,27 +389,37 @@ margin-left: 220px;
 
   /* ---------------- LET’S TALK CARD ---------------- */
   .letsTalkWrapper {
-    padding: 0;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
+    height: 600px;
+    padding: 0 10px;
+    margin-bottom: 30px;
   }
 
-  .letsTalkCard {
+  .newTalkCard {
     flex-direction: column;
-    padding: 28px !important;
+    padding: 14px !important;
     width: 100%;
-    border-radius: 22px;
+    border-radius: 16px;
     margin: 0 auto;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* LEFT SECTION */
+  .leftSection {
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
   }
 
   .leftSection h2 {
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 12px;
   }
 
   .leftSection .subtext {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 20px;
   }
 
@@ -432,69 +433,82 @@ margin-left: 220px;
 
   .emailInput {
     width: 100%;
-    height: 46px;
+    height: 45px;
     font-size: 15px;
     padding-left: 14px;
   }
 
   .insideBtn {
-    height: 46px;
-    width: 48px;
-    font-size: 22px;
+    height: 45px;
+    width: 45px;
+    font-size: 20px;
   }
 
   /* RIGHT SECTION */
   .rightSection {
-    margin-top: 26px;
-    gap: 18px;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 100%;
+    text-align: center;
+    gap: 16px;
+    align-items: center;
   }
 
   .infoRow {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
   }
 
   .infoRow p {
     font-size: 14px;
+    margin: 0;
   }
 
   .iconReact {
-    font-size: 20px;
+    font-size: 24px;
+    padding: 15px;
   }
 
   /* ---------------- FOOTER ---------------- */
   .supportFooter {
-    padding: 40px 0;
+    padding: 10px;
     text-align: center;
+    margin-top: -200px;
   }
 
   .footerTop {
     flex-direction: column;
-    gap: 18px;
-    padding: 0 10px;
+    gap: 10px;
+    padding: 0;
+    max-width: 100%;
   }
 
   .footerDesc {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .footerButton {
     width: 100%;
     justify-content: center;
-    padding: 14px 18px;
+    padding: 12px 16px;
+    margin-left: 0;
   }
 
   .avatarGroup {
-    margin-left: 12px;
+    justify-content: center;
+    margin-top: 10px;
   }
 
-  /* FOOTER MAIN (3 columns -> 1 column) */
+  /* FOOTER MAIN ROW -> STACKED */
   .footerMain {
     flex-direction: column;
-    gap: 28px;
-    margin-top: 32px;
+    gap: 20px;
+    align-items: center;
+    margin-top: 24px;
   }
 
   .footerLogo .logoCircle {
@@ -502,14 +516,14 @@ margin-left: 220px;
   }
 
   .footerLinks {
-    padding: 0;
-    width: 100%;
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
   }
 
   .footerLinks li {
-    margin: 6px 0;
-    font-size: 15px;
+    font-size: 14px;
+    margin: 4px 0;
   }
 
   .socialIcons {
@@ -517,14 +531,12 @@ margin-left: 220px;
   }
 
   .footerLine {
-    margin: 26px auto;
+    margin: 20px auto;
     width: 90%;
   }
 
   .footerBottom {
-    font-size: 13px;
+    font-size: 12px;
     padding: 0 8px;
   }
 }
-
-

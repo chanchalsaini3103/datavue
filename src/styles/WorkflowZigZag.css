@@ -226,6 +226,7 @@
     width: 55px;
     height: 55px;
     font-size: 18px;
+    margin-left: -60px;
   }
 
   .contentBox h3 {
@@ -260,7 +261,7 @@
 /* ---------------------------------- */
 @media (max-width: 480px) {
   .workflowSubtitle {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 30px;
   }
 
@@ -289,6 +290,122 @@
   }
 
   .centerLine {
+    top: 20px;
     height: calc(100% - 200px);
+  }
+}
+/* ------------------------------ */
+/* 📱 MOBILE (max-width: 768px)  */
+/* ------------------------------ */
+@media (max-width: 768px) {
+
+  .workflowSection {
+    padding: 60px 20px;
+  }
+
+  .workflowSubtitle {
+    font-size: 40px;
+    line-height: 36px;
+  }
+
+  /* LEFT FIXED ORANGE LINE */
+  .centerLine {
+    left: 30px;            /* Move line to left */
+    top: 120px;
+    height: calc(100% - 200px);
+    transform: none;
+  }
+
+  /* Entire row becomes single column */
+  .timelineRow {
+    position: relative;
+    margin-left: 60px;     /* push content to the right side */
+    padding-bottom: 60px;
+  }
+
+  /* CONTENT-only right aligned */
+  .timelineItem {
+    width: 100%;
+    margin: 0 !important;
+    text-align: left;
+  }
+
+  /* NUMBER CIRCLE aligned with left vertical line */
+  .numberCircle {
+    left: 30px !important; /* same as line */
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .contentBox h3 {
+    font-size: 26px;
+  }
+
+  .info {
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+  }
+
+  .duration {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .checkList li {
+    font-size: 15px;
+    gap: 12px;
+  }
+
+  .checkCircle {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* ---------------------------------- */
+/* 📱 SMALL MOBILE (max-width: 480px) */
+/* ---------------------------------- */
+@media (max-width: 480px) {
+
+  .workflowSubtitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .timelineRow {
+    margin-left: 55px; /* little less padding */
+  }
+
+  .numberCircle {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .contentBox h3 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  .checkList li {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .centerLine {
+    left: 28px; /* adjust slightly for small screens */
+    top: 350px;
+    height: calc(100% - 700px);
   }
 }
