@@ -5,7 +5,7 @@ const sections = [
   {
     id: 1,
     image:
-      "https://i.pinimg.com/736x/36/2c/d4/362cd46d180f11db6dba1cbaff9437b3.jpg",
+      "https://i.pinimg.com/736x/43/76/e1/4376e1d4cfa9c25c6fb3361a6a186d07.jpg",
     chips: ["#ITStrategy", "#BusinessGrowth", "#Innovation"],
     title: "IT Strategy Development",
     desc: "Transform your business with a comprehensive IT strategy designed to align technology with your goals. Our expert team will guide you through optimising your IT infrastructure, enhancing efficiency, and driving innovation",
@@ -18,7 +18,7 @@ const sections = [
   {
     id: 2,
     image:
-      "https://i.pinimg.com/736x/91/01/f1/9101f111180713e9fd2c4e484c0ca8d2.jpg",
+      "https://i.pinimg.com/736x/50/65/25/506525f43d5ab8582fc27df85d9d6c20.jpg",
     chips: ["#Cloud", "#Growth", "#Security"],
     title: "Cloud Integration",
     desc: "Protect your digital assets with robust cybersecurity solutions that defend against threats and vulnerabilities. Our services include risk assessments, threat monitoring, and incident response to ensure your data remains secure.",
@@ -31,7 +31,7 @@ const sections = [
   {
     id: 3,
     image:
-      "https://i.pinimg.com/736x/12/ee/1a/12ee1a8f99391834f0be1713fb054e05.jpg",
+      "https://i.pinimg.com/736x/99/c5/2a/99c52a4e53a5da112206d8d2a308bd25.jpg",
     chips: ["#Automation", "#AI", "#Productivity"],
     title: "Automation Solutions",
     desc: "Leverage data-driven insights to make informed decisions and drive business growth. Our data analytics and BI solutions provide actionable intelligence to enhance performance and strategy.",
@@ -44,7 +44,7 @@ const sections = [
   {
     id: 4,
     image:
-      "https://i.pinimg.com/736x/5b/84/5f/5b845f48450b91feaa218473d4aa8973.jpg",
+      "https://i.pinimg.com/736x/c5/36/93/c5369326846c59fd288aea28470cece6.jpg",
     chips: ["#Security", "#RiskManagement", "#ITAudit"],
     title: "Cybersecurity Strategy",
     desc: "Bring your unique business requirements to life with custom software solutions tailored to your needs. Our development team creates scalable, efficient, and user-friendly applications designed to streamline your operations.",
