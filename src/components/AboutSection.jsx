@@ -7,29 +7,24 @@ import "../styles/aboutsection.css";
 const stats = [
   {
     label: "Experience",
-    number: 12,
+    number: 5,
     description:
       "For over 12 years, we have been a trusted partner in delivering innovative IT solutions that drive business growth.",
   },
   {
     label: "Projects",
-    number: 225,
+    number: 25,
     description:
       "Our team has completed over 225 successful projects, each tailored to meet the unique needs of our clients.",
   },
-  {
-    label: "Certifications",
-    number: 45,
-    description:
-      "With 45+ industry certifications, we bring unmatched expertise and cutting-edge knowledge to every engagement.",
-  },
+  
 ];
 
 const AboutSection = () => {
-  // useInView hook
+  
   const [ref, inView] = useInView({
-    triggerOnce: true, // animate only once
-    threshold: 0.3, // 30% of section must be visible
+    triggerOnce: true, 
+    threshold: 0.3,
   });
 
   return (

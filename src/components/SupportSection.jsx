@@ -93,7 +93,8 @@ const SupportPage = () => {
     <div className="rightSection">
 
       <div className="infoRow">
-        <p>123 Innovation Drive, Suite 500,<br></br> Tech City, TX 75001</p>
+        <p>203, Swojas Solitaire, Pancard Club Rd, 
+          <br />Baner, Pune 411045</p>
         <FaMapMarkerAlt className="iconReact" />
       </div>
 
@@ -101,13 +102,13 @@ const SupportPage = () => {
         <p>
           Mon–Fri: 9:00 AM – 5:00 PM <br />
           Sat: 10:00 AM – 2:00 PM <br />
-          Sun: Closed
+          
         </p>
         <FaClock className="iconReact" />
       </div>
 
       <div className="infoRow">
-        <p>917821820239 <br></br> indo@gmail.com</p>
+        <p>+91 7798137777  <br></br> enquiry@datavue.in</p>
         {/* <FaPhoneAlt className="iconReact" /> */}
         <FaEnvelope className="iconReact" />
       </div>
@@ -168,7 +169,7 @@ const SupportPage = () => {
   <div className="footerLine"></div>
 
   <p className="footerBottom">
-    © 2025 Dalgona by Ditych. Powered by Framer. All rights reserved.
+    © 2025 Datavue by Infocus . All rights reserved.
   </p>
 
 </footer>

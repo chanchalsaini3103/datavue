@@ -77,7 +77,7 @@ const HeroTeam = () => {
       </div>
 
       {/* Second Row - Scroll Right */}
-      <div className="marquee-container">
+      {/* <div className="marquee-container">
         <div className="marquee scroll-right">
           {teamData.slice(3, 6).map((member, idx) => (
             <div className="team-card horizontal" key={idx}>
@@ -89,7 +89,7 @@ const HeroTeam = () => {
               </div>
             </div>
           ))}
-          {/* Duplicate for seamless scroll */}
+          
           {teamData.slice(3, 6).map((member, idx) => (
             <div className="team-card horizontal" key={"dup2-" + idx}>
               <img src={member.img} alt={member.name} className="team-img" />
@@ -101,7 +101,7 @@ const HeroTeam = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
