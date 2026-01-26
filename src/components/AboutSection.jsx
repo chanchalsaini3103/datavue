@@ -9,13 +9,13 @@ const stats = [
     label: "Experience",
     number: 5,
     description:
-      "For over 12 years, we have been a trusted partner in delivering innovative IT solutions that drive business growth.",
+      "For over 5 years, we have been a trusted IT partner, delivering innovative and reliable solutions that help businesses streamline operations, enhance efficiency, and achieve sustainable growth.",
   },
   {
     label: "Projects",
     number: 25,
     description:
-      "Our team has completed over 225 successful projects, each tailored to meet the unique needs of our clients.",
+      "Our team has successfully delivered 25+ projects, each carefully tailored to address the specific goals and business requirements of our clients.",
   },
   
 ];
@@ -33,8 +33,10 @@ const AboutSection = () => {
         <p className="small-heading">OUR EXPERTISE</p>
         <h2 className="main-heading">Why Choose Us?</h2>
         <p className="description">
-          With over 15 years of experience in the IT industry, we have successfully delivered transformative solutions for businesses across various sectors. Our team of certified professionals is committed to providing innovative, customized services that meet the unique needs of your business.
-        </p>
+        With 5+ years of proven IT expertise, we help businesses turn ideas into powerful digital solutions. 
+        Our certified professionals focus on innovation, reliability, 
+        and tailor-made services that align perfectly with your business goals—delivering results that truly matter.
+         </p>
       </div>
 
       <div className="about-counters">

@@ -3,16 +3,16 @@ import "../styles/TeamSection.css";
 
 const teamData = [
   {
-    name: "Sarah Lee",
-    role: "CHIEF EXECUTIVE OFFICER (CEO)",
-    desc: "Sarah ensures that our projects are delivered on time and within budget. With her exceptional organizational skills and attention to detail, she coordinates all aspects of project execution, ensuring client satisfaction.",
-    img: "https://framerusercontent.com/images/O84aEy6cbWWMnamO8UuKiupvEOc.png",
+    name: "Piyush Barmecha",
+    role: "Founder",
+    desc: "A visionary leader with a strong passion for technology and business innovation, driving the company’s mission to deliver reliable and impactful IT solutions.",
+    img: "images/piyush.jpeg",
   },
   {
-    name: "John Doe",
-    role: "CHIEF TECHNOLOGY OFFICER (CTO)",
-    desc: "With over 20 years of experience in the IT industry, John leads our team with a vision for innovation and excellence. He has successfully overseen numerous large-scale digital transformation projects for enterprises.",
-    img: "https://framerusercontent.com/images/W1A3uBx46267ftvomrOoQ0ZA.png",
+    name: "Rahul Saini",
+    role: "Co-Founder",
+    desc: "With over 20 years of experience in the IT industry, A strategic leader focused on innovation, collaboration, and delivering high-quality IT solutions.",
+    img: "images/rahul.jpeg",
   },
   {
     name: "Emily Davis",

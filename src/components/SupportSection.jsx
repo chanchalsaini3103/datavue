@@ -130,8 +130,8 @@ const SupportPage = () => {
   <button className="footerButton">
    <span className="buttonText">Contact Us</span>
     <div className="avatarGroup">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.aFAdc56FSpTiPfA2F6GAsQHaHa?pid=Api&P=0&h=220" alt="founder1" className="avatarImg" />
-      <img src="https://tse4.mm.bing.net/th/id/OIP.aFAdc56FSpTiPfA2F6GAsQHaHa?pid=Api&P=0&h=220" alt="founder2" className="avatarImg" />
+      <img src="images/piyush.jpeg" alt="founder1" className="avatarImg" />
+      <img src="images/rahul.jpeg" alt="founder2" className="avatarImg" />
       <img src="https://tse4.mm.bing.net/th/id/OIP.aFAdc56FSpTiPfA2F6GAsQHaHa?pid=Api&P=0&h=220" alt="founder3" className="avatarImg" />
     </div>
     
